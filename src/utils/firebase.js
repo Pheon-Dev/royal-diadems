@@ -5,13 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE,
-  authDomain: "blog-cddc2.firebaseapp.com",
-  projectId: "blog-cddc2",
-  storageBucket: "blog-cddc2.appspot.com",
-  messagingSenderId: "413696194974",
-  appId: "1:413696194974:web:bc0a551cd5558bdf0dbe8f"
+  apiKey: "AIzaSyBsjwTGV6vJ52dsNYFhRQad_CYWaTfonG0",
+  authDomain: "royal-diadems-414014.firebaseapp.com",
+  projectId: "royal-diadems-414014",
+  storageBucket: "royal-diadems-414014.appspot.com",
+  messagingSenderId: "1057152575658",
+  appId: "1:1057152575658:web:9e826c7736b553c3c288d3",
+  measurementId: "G-LM8QWBBGFZ",
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+
