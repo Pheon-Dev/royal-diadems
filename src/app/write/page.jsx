@@ -14,6 +14,18 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
+
+// import ReactQuill from "react-quill";
+const QuillNoSSRWrapper = dynamic(
+  async () => {
+    const { default: RQ } = await import("react-quill");
+    // eslint-disable-next-line react/display-name
+    return ({ forwardedRef, ...props }) => <RQ ref={forwardedRef} {...props} />;
+  },
+  {
+    ssr: false,
+  },
+);
 const ReactQuill = dynamic(import("react-quill"), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
@@ -143,7 +155,7 @@ const WritePage = () => {
             </button>
           </div>
         )}
-        <ReactQuill
+        <QuillNoSSRWrapper
           className={styles.textArea}
           theme="bubble"
           value={value}
